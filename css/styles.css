@@ -1,0 +1,646 @@
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria-Regular.eot");
+  src: url("../fonts/Geometria-Regular.eot") format("embedded-opentype"), url("../fonts/Geometria-Regular.woff") format("woff"), url("../fonts/Geometria-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro.eot");
+  src: url("../fonts/GothamPro.eot") format("embedded-opentype"), url("../fonts/GothamPro.woff") format("woff"), url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Bold.eot");
+  src: url("../fonts/GothamPro-Bold.eot") format("embedded-opentype"), url("../fonts/GothamPro-Bold.woff") format("woff"), url("../fonts/GothamPro.woff2") format("woff2"), url("../fonts/GothamPro-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+/* roboto-regular - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-cyrillic_latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-condensed-regular - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-condensed-v25-cyrillic_latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* russo-one-regular - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/russo-one-v14-cyrillic_latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.popup-congratulation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 18, 50, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 20;
+  display: none;
+}
+.popup-congratulation--active {
+  transition: all 200ms;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+.popup-congratulation__body {
+  padding: 32px 0px 29px;
+  background: linear-gradient(135deg, #88FF5F 0%, #BAFFA1 24.48%, #BAFFA1 48.96%, #9FF136 75%, #88FF5F 100%);
+  box-shadow: 0px 9px 15px 2px rgba(46, 24, 21, 0.54);
+}
+.popup-congratulation__title {
+  color: #221232;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 29.644px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+.popup-congratulation__text {
+  color: #221232;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 21.91px;
+  margin-bottom: 22px;
+  width: 100%;
+  line-height: 30px;
+}
+
+.popup {
+  max-width: 344px;
+  width: 100%;
+  border-radius: 22px;
+}
+
+.popup-no {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 18, 50, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 200ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 20;
+  display: none;
+}
+.popup-no--active {
+  transition: all 200ms;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+.popup-no__body {
+  padding: 22.96px 0px 30px;
+  background: linear-gradient(135deg, #FF6948 0%, #FF8B8B 24.48%, #FF6948 48.96%, #FFBD80 75%, #FF6948 100%);
+  box-shadow: 0px 9px 15px 2px rgba(46, 24, 21, 0.54);
+}
+.popup-no__title {
+  color: #221232;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 48.342px;
+  text-transform: uppercase;
+  margin-bottom: 29.04px;
+}
+.popup-no__text {
+  color: #221232;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 21.91px;
+  margin-bottom: 39px;
+}
+
+.popup {
+  max-width: 344px;
+  width: 100%;
+  border-radius: 22px;
+}
+
+.popup-btn {
+  border-radius: 50px;
+  color: #221232;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 34.19px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 57px;
+}
+.popup-btn--small {
+  max-width: 156px;
+  width: 100%;
+}
+.popup-btn--medium {
+  max-width: 220px;
+  width: 100%;
+  background: linear-gradient(135deg, #88FF5F 0%, #BAFFA1 24.48%, #BAFFA1 48.96%, #9FF136 75%, #88FF5F 100%);
+  font-weight: 700;
+}
+.popup-btn--large {
+  max-width: 246px;
+  width: 100%;
+}
+
+.popup-final {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34, 18, 50, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 200ms;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  z-index: 30;
+}
+.popup-final--active {
+  transition: all 200ms;
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+.popup-final__body {
+  padding: 22.96px 0px 30px;
+  background: linear-gradient(135deg, #9DDCFF 0%, #74BBFC 25%, #9DDCFF 50%, #CFFFFF 77.6%, #9DDCFF 100%);
+  box-shadow: 0px 9px 15px 2px rgba(46, 24, 21, 0.54);
+}
+.popup-final__title {
+  color: #221232;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 48.342px;
+  text-transform: uppercase;
+  margin-bottom: 29.04px;
+}
+.popup-final__text {
+  color: #221232;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+  font-size: 21.91px;
+  margin-bottom: 39px;
+}
+
+.popup {
+  max-width: 344px;
+  width: 100%;
+  border-radius: 22px;
+}
+
+.wrapper-content {
+  overflow: hidden;
+  background-color: rgb(34, 18, 50);
+}
+
+.hero {
+  position: relative;
+  max-width: 390px;
+  width: 100%;
+  height: 710px;
+  margin: 0 auto;
+  background: url(../images/hero-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero__img {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  background-position: 50% 50%;
+}
+.hero__desc {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  bottom: -70px;
+}
+.hero__desc-inner {
+  position: relative;
+  max-width: 390px;
+  width: 100%;
+  height: 180.269px;
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/animate-gif.gif) no-repeat;
+  background-size: cover;
+  mix-blend-mode: screen;
+}
+.hero__desc-inner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../images/gif.bg.svg) no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  mix-blend-mode: overlay;
+}
+.hero__desc-content {
+  max-width: 344px;
+  width: 100%;
+  height: 132px;
+  border-radius: 20px;
+  background: url(../images/desc-bg.png) no-repeat;
+  background-size: cover;
+}
+.hero__desc-text-box {
+  display: flex;
+  justify-content: center;
+  padding: 5.58px 0px 8.18px;
+}
+.hero__desc-text {
+  max-width: 226px;
+  width: 100%;
+  color: #5A3282;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 33.226px;
+  font-weight: 400;
+  line-height: 39.2px;
+}
+.hero__desc-text-price {
+  text-transform: uppercase;
+  font-family: "Gotham Pro", sans-serif;
+}
+
+.header {
+  padding: 23px 0px 27px;
+}
+.header__inner {
+  max-width: 360px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: block;
+}
+.logo--large {
+  width: 220px;
+  height: 59px;
+}
+.logo--small {
+  width: 134.237px;
+  height: 36px;
+  opacity: 0.5;
+}
+
+.controls {
+  padding-top: 84px;
+}
+.controls__body {
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--clothes-pink-gray, linear-gradient(135deg, #E0E0E0 0%, #FFDAFB 16.67%, #E0E0E0 33.85%, #FFDAFB 50%, #E0E0E0 67.19%, #FFDAFB 82.81%, #E0E0E0 100%));
+  border-radius: 25px 25px 0px 0px;
+  padding: 20px 0px 21px;
+}
+.controls__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+.controls__progress-bar {
+  position: relative;
+  width: 100%;
+  height: 49px;
+  border-radius: 24.5px;
+  background: #221232;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.controls__progress-bar-text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFE2E7;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 28.736px;
+  font-weight: 700;
+}
+.controls__progress-bar-text span {
+  color: #FFE2E7;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 28.736px;
+  font-weight: 700;
+}
+.controls__progress {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(#CF1F74, #EC4F74, #CF1F74);
+  transition: width 0.5s ease-in-out;
+}
+.controls__btn {
+  max-width: 206px;
+  width: 100%;
+  border-radius: 24.5px;
+  background: linear-gradient(162deg, #854AAA 0%, #BD78C9 17.19%, #854AAA 32.81%, #4D2680 50%, #854AAA 67.19%, #B97EC8 83.33%, #854AAA 100%);
+  padding: 18.09px 0px 19.91px;
+  color: rgb(255, 226, 231);
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 33.663px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+.scratchs {
+  padding: 30px 0px 5px;
+}
+.scratchs__inner {
+  padding: 0 23px;
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 379px) {
+  .scratchs__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.scratch-box {
+  position: relative;
+  max-width: 161px;
+  width: 100%;
+  height: 225px;
+  cursor: pointer;
+  margin-bottom: 27px;
+}
+.scratch-box--pointer-no {
+  pointer-events: none;
+}
+
+.scratch {
+  padding: 13px;
+  border-radius: 22px;
+  background: url(../images/scratch-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.scratch__body {
+  max-width: 134px;
+  width: 100%;
+  padding: 8.73px 10px 21.96px;
+}
+.scratch__title {
+  color: #4F2781;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 8.1px;
+  font-weight: 700;
+  line-height: 10.373px;
+  text-transform: uppercase;
+  opacity: 0.3000000119;
+  text-align: center;
+  margin-bottom: 22.7px;
+}
+.scratch__dollar {
+  color: #4F2781;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 48.59px;
+  font-weight: 700;
+  opacity: 0.3000000119;
+  margin-bottom: 23.4px;
+  text-align: center;
+}
+.scratch__text {
+  color: #4F2781;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 16.399px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  opacity: 0.3000000119;
+}
+.scratch__text-bold {
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 700;
+}
+
+.scratch-money {
+  position: absolute;
+  background: url(../images/secratch-money-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 22px;
+  padding: 14px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.scratch-money--active {
+  visibility: visible;
+  opacity: 1;
+}
+.scratch-money__body {
+  padding: 42px 0px 25px;
+}
+.scratch-money__dollar {
+  color: #FFE2E7;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 48.59px;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
+.scratch-money__text {
+  color: #FFE2E7;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 20.535px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.scratch-empty {
+  position: absolute;
+  background: url(../images/empty-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 22px;
+  padding: 14px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.scratch-empty--active {
+  visibility: visible;
+  opacity: 1;
+}
+.scratch-empty__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.scratch-empty__text {
+  color: #4F2781;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 26.48px;
+  font-weight: 400;
+  opacity: 0.3000000119;
+}
+
+.footer {
+  padding: 25px 0px;
+  background-color: #623186;
+}
+.footer__inner {
+  max-width: 391px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.footer__top {
+  margin-bottom: 18px;
+}
+.footer__title {
+  color: #FDEACE;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 26.63px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.footer__legal-items {
+  display: flex;
+  justify-content: center;
+  gap: 21.7px;
+}
+.footer__link {
+  color: #F76487;
+  text-align: center;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 17.82px;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__content {
+  margin-bottom: 16px;
+}
+.footer__text {
+  color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.footer__btn {
+  background-color: transparent;
+  width: 77.226px;
+  height: 21px;
+  flex-shrink: 0;
+  border: 0.677px solid #FFF;
+  box-shadow: 0px 7.4516129494px 21.6774196625px 0px rgba(158, 158, 158, 0.3);
+  color: #FFF;
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+  font-size: 8.386px;
+  font-weight: 400;
+  display: block;
+  margin: 0 auto;
+}
+.footer__btn:disabled {
+  opacity: 0.2;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer__copyright {
+  color: #FDEACE;
+  text-align: right;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 17.331px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.popup-container {
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

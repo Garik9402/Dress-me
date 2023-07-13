@@ -1,0 +1,66 @@
+@font-face {
+   font-family: "Geometria";
+   src: url("../fonts/Geometria-Regular.eot");
+   src: url("../fonts/Geometria-Regular.eot")format("embedded-opentype"),
+      url("../fonts/Geometria-Regular.woff") format("woff"),
+      url("../fonts/Geometria-Regular.ttf") format("truetype");
+   font-style: normal;
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: "Gotham Pro";
+   src: url("../fonts/GothamPro.eot");
+   src: url("../fonts/GothamPro.eot")format("embedded-opentype"),
+      url("../fonts/GothamPro.woff") format("woff"),
+      url("../fonts/GothamPro.woff2") format("woff2"),
+      url("../fonts/GothamPro.ttf") format("truetype");
+   font-style: normal;
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: "Gotham Pro";
+   src: url("../fonts/GothamPro-Bold.eot");
+   src: url("../fonts/GothamPro-Bold.eot")format("embedded-opentype"),
+      url("../fonts/GothamPro-Bold.woff") format("woff"),
+      url("../fonts/GothamPro.woff2") format("woff2"),
+      url("../fonts/GothamPro-Bold.ttf") format("truetype");
+   font-style: normal;
+   font-weight: 700;
+}
+
+/* roboto-regular - cyrillic_latin */
+@font-face {
+   font-display: swap;
+   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2');
+   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-condensed-regular - cyrillic_latin */
+@font-face {
+   font-display: swap;
+   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+   font-family: 'Roboto Condensed';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../fonts/roboto-condensed-v25-cyrillic_latin-regular.woff2') format('woff2');
+   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&display=swap');
+
+/* russo-one-regular - cyrillic_latin */
+@font-face {
+   font-display: swap;
+   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+   font-family: 'Russo One';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../fonts/russo-one-v14-cyrillic_latin-regular.woff2') format('woff2');
+   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

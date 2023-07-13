@@ -1,0 +1,33 @@
+@import 'mixin.scss';
+
+.popup-btn {
+   border-radius: 50px;
+   @include text;
+   font-size: 34.19px;
+   text-transform: uppercase;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   height: 57px;
+
+
+   &--small {
+      max-width: 156px;
+      width: 100%;
+   }
+
+   &--medium {
+      max-width: 220px;
+      width: 100%;
+      background: linear-gradient(135deg, #88FF5F 0%, #BAFFA1 24.48%, #BAFFA1 48.96%, #9FF136 75%, #88FF5F 100%);
+      font-weight: 700;
+
+   }
+
+   &--large {
+      max-width: 246px;
+      width: 100%;
+
+   }
+}

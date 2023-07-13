@@ -1,0 +1,36 @@
+$breakpoints: (
+   "sm": 380px,
+   "md": 576px,
+   "lg": 768px,
+   "xl": 992px,
+   "xxl": 1280px,
+);
+
+@mixin mq($width, $type: max) {
+   @if map_has_key($breakpoints, $width) {
+      $width: map_get($breakpoints, $width);
+
+      @if $type==max {
+         $width: $width - 1px;
+      }
+
+      @media only screen and (#{$type}-width: $width) {
+         @content;
+      }
+   }
+}
+
+@mixin button-style($background-color, $text-color) {
+   padding: 10px 20px;
+   border: none;
+   background-color: $background-color;
+   color: $text-color;
+   cursor: pointer;
+}
+
+@mixin text($text: #221232) {
+   color: $text;
+   text-align: center;
+   font-family: "Gotham Pro", sans-serif;
+   font-weight: 400;
+}
