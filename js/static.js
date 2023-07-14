@@ -1,6 +1,5 @@
 
-
-const scartchBox = document.querySelectorAll('.scratch-box')
+const scratchBox = document.querySelectorAll('.scratch-box')
 const popupNo = document.querySelector('.popup-no');
 const popupCongratulation = document.querySelector('.popup-congratulation');
 const scratchMoney = document.querySelectorAll('.scratch-money')
@@ -27,14 +26,14 @@ const openPopup = (event) => {
 }
 
 
-scartchBox.forEach(block => {
+scratchBox.forEach(block => {
    block.addEventListener('click', openPopup);
 
 });
 
 // Функция которая добавыляет класс к родителю, для добавления стиля.
 function pointFunc() {
-   scartchBox.forEach(box => {
+   scratchBox.forEach(box => {
       box.addEventListener('click', () => {
          box.classList.add('scratch-box--pointer-no')
       })
@@ -49,7 +48,7 @@ const priceElement = document.querySelector('.money-count')
 const popupFinal = document.querySelector('.popup-final')
 
 
-scartchBox.forEach(box => {
+scratchBox.forEach(box => {
    const countMoney = box.querySelector('.count-money');
    if (countMoney) {
       box.addEventListener('click', () => {
@@ -86,9 +85,9 @@ const shuffleBlocks = () => {
    })
    popupNo.classList.remove('popup-no--active');
    $body.style = ''
-   const blocksArray = Array.from(scartchBox);
+   const blocksArray = Array.from(scratchBox);
    blocksArray.sort(() => Math.random() - 0.5);
-   const parentElement = scartchBox[0].parentNode;
+   const parentElement = scratchBox[0].parentNode;
    blocksArray.forEach(block => parentElement.appendChild(block));
 };
 
@@ -97,7 +96,7 @@ const btnTryAgaine = document.querySelector('.popup-no__btn');
 // Кнопка которая начинает новую игру
 btnTryAgaine.addEventListener('click', () => {
    shuffleBlocks()
-   scartchBox.forEach(box => {
+   scratchBox.forEach(box => {
       box.classList.remove('scratch-box--pointer-no')
    })
    progressBarText.textContent = '0'
@@ -127,5 +126,7 @@ btnGet.addEventListener('click', scrollToButton)
 window.onload = function () {
    shuffleBlocks()
 };
+
+
 
 
