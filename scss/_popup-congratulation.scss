@@ -13,6 +13,7 @@
    display: none;
    visibility: hidden;
    opacity: 0;
+   height: 100%;
 
    &--active {
       transition: all 200ms;
