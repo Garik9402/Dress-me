@@ -1,34 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-button,
-input,
-select,
-textarea {
-  border: none;
-}
-
-html {
-  -webkit-tap-highlight-color: transparent;
-}
-
-button {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
 @font-face {
   font-family: "Geometria";
   src: url("../fonts/Geometria-Regular.eot");
@@ -294,64 +263,6 @@ body {
   width: 100%;
   background-position: 50% 50%;
 }
-.hero__desc {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  bottom: -70px;
-}
-.hero__desc-inner {
-  position: relative;
-  max-width: 390px;
-  width: 100%;
-  height: 180.269px;
-  border-radius: 20px;
-  padding: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(../images/animate-gif.gif) no-repeat;
-  background-size: cover;
-  mix-blend-mode: screen;
-}
-.hero__desc-inner::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url(../images/gif.bg.svg) no-repeat;
-  background-size: cover;
-  top: 0;
-  left: 0;
-  mix-blend-mode: overlay;
-}
-.hero__desc-content {
-  max-width: 344px;
-  width: 100%;
-  height: 132px;
-  border-radius: 20px;
-  background: url(../images/desc-bg.png) no-repeat;
-  background-size: cover;
-}
-.hero__desc-text-box {
-  display: flex;
-  justify-content: center;
-  padding: 5.58px 0px 8.18px;
-}
-.hero__desc-text {
-  max-width: 226px;
-  width: 100%;
-  color: #5A3282;
-  text-align: center;
-  font-family: "Gotham Pro", sans-serif;
-  font-size: 33.226px;
-  font-weight: 400;
-  line-height: 39.2px;
-}
-.hero__desc-text-price {
-  text-transform: uppercase;
-  font-family: "Gotham Pro", sans-serif;
-}
 
 .header {
   padding: 23px 0px 27px;
@@ -394,9 +305,16 @@ body {
   justify-content: center;
   align-items: center;
   background: url(../images/animate-gif.gif) no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   mix-blend-mode: screen;
   margin: 0 auto;
+}
+@media only screen and (max-width: 379px) {
+  .animated-section__desc-inner {
+    max-width: 370px;
+    padding: 10px;
+  }
 }
 .animated-section__desc-content {
   max-width: 344px;
@@ -405,6 +323,12 @@ body {
   border-radius: 20px;
   background: url(../images/desc-bg.png) no-repeat;
   background-size: cover;
+}
+@media only screen and (max-width: 379px) {
+  .animated-section__desc-content {
+    max-width: 300px;
+    width: 100%;
+  }
 }
 .animated-section__desc-text-box {
   display: flex;
@@ -514,7 +438,6 @@ body {
   position: relative;
   max-width: 161px;
   width: 100%;
-  height: 225px;
   cursor: pointer;
   margin-bottom: 27px;
 }
@@ -526,13 +449,14 @@ body {
   padding: 13px;
   border-radius: 22px;
   background: url(../images/scratch-bg.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 .scratch__body {
   max-width: 134px;
   width: 100%;
   padding: 8.73px 10px 21.96px;
+  margin: 0 auto;
 }
 .scratch__title {
   color: #4F2781;
@@ -572,7 +496,7 @@ body {
 .scratch-money {
   position: absolute;
   background: url(../images/secratch-money-bg.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border-radius: 22px;
   padding: 14px;
