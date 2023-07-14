@@ -20,13 +20,6 @@ $breakpoints: (
    }
 }
 
-@mixin button-style($background-color, $text-color) {
-   padding: 10px 20px;
-   border: none;
-   background-color: $background-color;
-   color: $text-color;
-   cursor: pointer;
-}
 
 @mixin text($text: #221232) {
    color: $text;
